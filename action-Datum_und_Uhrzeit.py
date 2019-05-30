@@ -71,7 +71,7 @@ def subscribe_intent_callback(hermes, intent_message):
             result_sentence = "Wir haben gerade die Stunde {hours}".format(hours=hours)
         elif datetype == 'month':
             month = datetime.datetime.now().month
-            month_list = ['Januar','Februar','März';'April','Mai','Juni','Juli','August','September','Oktober','Novenber','Dezember']
+            month_list = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','Novenber','Dezember']
             result_sentence = "Wir haben den Monat {month}".format(month=month_list[month - 1])
         current_session_id = intent_message.session_id
         hermes.publish_end_session(current_session_id, result_sentence)
